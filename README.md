@@ -12,6 +12,7 @@ lib;
 ```
 
 The steps are:
+
 1. Go to http://grooveshark.com
 
 2. Open your browser devtools, go to the Console tab and type the content of the JS script above.

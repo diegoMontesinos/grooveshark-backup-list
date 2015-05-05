@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Grooveshark Backup</title>
+	</head>
+	<style type="text/css">
+		#groove-table {
+			width: 100%;
+			font-family: arial, sans-serif;
+			font-size: 12px;
+		}
+
+		#groove-body {
+			width: 100%;
+		}
+
+		#groove-body td {
+			border: 1px solid #000;
+		}
+
+		#groove-body tr {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<body>
+
+		<div style="width: 500px;">
+			<table id="groove-table">
+				<thead  align="center">
+					<th>SONG</th><th>ARTIST</th><th>ALBUM</th>
+				</thead>
+				<tbody id="groove-body"  align="center"></tbody>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="backup.js"></script>
+		<script type="text/javascript">
+			var songs = backupGrooveshark.songs;
+			var songsArr = new Array();
+			var tbody = document.getElementById("groove-body");
+
+			for(var id in songs) {
+				var song = songs[id];
+				songsArr.push(song);
+			}
+
+			songsArr.sort(function (a, b) {
+				return a.D.localeCompare(b.D);
+			});
+
+			for (var i = 0; i < songsArr.length; i++) {
+				var song = songsArr[i];
+				var tr = document.createElement("tr");
+				var tdSong = document.createElement("td");
+				var tdArtist = document.createElement("td");
+				var tdAlbum = document.createElement("td");
+
+				tdSong.innerHTML = song.J;
+				tdArtist.innerHTML = song.D;
+				tdAlbum.innerHTML = song.B;
+
+				tr.appendChild(tdSong);
+				tr.appendChild(tdArtist);
+				tr.appendChild(tdAlbum);
+
+				tbody.appendChild(tr);
+			}
+		</script>
+	</body>
+</html>

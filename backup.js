@@ -1,0 +1,1 @@
+var backupGrooveshark = /** Output from https://gist.github.com/simonc/ec00955845e23046f6d8 goes here **/;

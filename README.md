@@ -13,7 +13,11 @@ lib;
 
 The steps are:
 1. Go to http://grooveshark.com
+
 2. Open your browser devtools, go to the Console tab and type the content of the JS script above.
+
 3. You'll get a big JSON blob copy it (without the begin and end quotes).
+
 4. Paste the result in the backup.js file.
+
 5. Open the index.html in a browser.

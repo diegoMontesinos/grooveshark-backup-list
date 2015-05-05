@@ -17,7 +17,7 @@ The steps are:
 
 2. Open your browser devtools, go to the Console tab and type the content of the JS script above.
 
-3. You'll get a big JSON blob copy it (without the begin and end quotes).
+3. You'll get a big JSON blob, copy it without the begin and end quotes.
 
 4. Paste the result in the backup.js file.
 
